@@ -4,9 +4,9 @@ import { visiblePartners } from './data/establishments';
 import './styles.css';
 
 const steps = [
-  { number: '01', title: 'Prenez', icon: '↗', text: 'Payez directement sur le terminal de paiement sans contact. Une batterie se libère automatiquement.' },
-  { number: '02', title: 'Emportez', icon: '↻', text: 'Emportez votre batterie et rechargez votre téléphone tout en continuant votre journée ou votre activité.' },
-  { number: '03', title: 'Restituez', icon: '↘', text: 'Restituez simplement la batterie dans une borne GoBat.' },
+  { number: '01', title: 'Prenez', icon: 'take', text: 'Payez directement sur le terminal de paiement sans contact. Une batterie se libère automatiquement.' },
+  { number: '02', title: 'Emportez', icon: 'carry', text: 'Emportez votre batterie et rechargez votre téléphone tout en continuant votre journée ou votre activité.' },
+  { number: '03', title: 'Restituez', icon: 'return', text: 'Restituez simplement la batterie dans une borne GoBat.' },
 ];
 
 const benefits = [
@@ -25,7 +25,36 @@ function Logo({ light = false }) {
 }
 
 function Arrow() { return <span className="arrow" aria-hidden="true">↗</span>; }
+function StepIcon({ type }) {
+  if (type === 'take') {
+    return (
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="14" y="9" width="20" height="30" rx="4" fill="none" stroke="currentColor" strokeWidth="2.5"/>
+        <path d="M19 16h10M20 31h8" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
+        <path d="M36 17c3 2 3 6 0 8M40 14c5 4 5 10 0 14" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
+      </svg>
+    );
+  }
 
+  if (type === 'carry') {
+    return (
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="17" y="9" width="14" height="29" rx="4" fill="none" stroke="currentColor" strokeWidth="2.5"/>
+        <rect x="21" y="6" width="6" height="3" rx="1" fill="currentColor"/>
+        <path d="M24 16v8M20 20h8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
+        <path d="M11 31c3 4 7 7 12 8M37 31c-3 4-7 7-12 8" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 48 48" aria-hidden="true">
+      <rect x="11" y="8" width="26" height="32" rx="4" fill="none" stroke="currentColor" strokeWidth="2.5"/>
+      <rect x="18" y="24" width="12" height="10" rx="2" fill="none" stroke="currentColor" strokeWidth="2.5"/>
+      <path d="M24 12v9M20 17l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
@@ -63,7 +92,7 @@ function App() {
 
         <section className="how section-dark" id="fonctionnement">
           <div className="section-intro how-intro"><div><p className="eyebrow eyebrow-green">Comment ça marche ?</p><h2>Votre<br />batterie.<br /><span>Partout.</span></h2></div><p className="section-lead">Simple et rapide : réglez directement sur le terminal de paiement de la borne, récupérez votre batterie et restez mobile pendant la recharge.</p></div>
-          <div className="steps">{steps.map((step) => <article className="step" key={step.number}><div className="step-head"><span className="step-number">{step.number}</span><span className="step-icon">{step.icon}</span></div><h3>{step.title}</h3><p>{step.text}</p></article>)}</div>
+          <div className="steps">{steps.map((step) => <article className="step" key={step.number}><div className="step-head"><span className="step-number">{step.number}</span><span className="step-icon"><StepIcon type={step.icon} /></span></div><h3>{step.title}</h3><p>{step.text}</p></article>)}</div>
         </section>
 
         <section className="benefits section-light" id="pourquoi">
