@@ -6,7 +6,7 @@ import './styles.css';
 const steps = [
   { number: '01', title: 'Prenez', icon: '↗', text: 'Payez directement sur le terminal de paiement sans contact. Une batterie se libère automatiquement.' },
   { number: '02', title: 'Emportez', icon: '↻', text: 'Emportez votre batterie et rechargez votre téléphone tout en continuant votre journée ou votre activité.' },
-  { number: '03', title: 'Rapportez', icon: '↘', text: 'Restituez simplement la batterie dans une borne GoBat.' },
+  { number: '03', title: 'Restituez', icon: '↘', text: 'Restituez simplement la batterie dans une borne GoBat.' },
 ];
 
 const benefits = [
