@@ -84,7 +84,26 @@ function App() {
         <section className="contact section-light" id="contact"><div className="contact-copy"><p className="eyebrow">Parlons de votre établissement</p><h2>Vous souhaitez<br />une borne <span>GoBat ?</span></h2><p>Présentez-nous votre établissement. Nous vous recontacterons pour échanger sur la meilleure installation.</p><a className="email-link" href="mailto:contact.gobat21@gmail.com">contact.gobat21@gmail.com <Arrow /></a></div><form className="contact-form" onSubmit={(event) => event.preventDefault()}><div className="form-row"><label>Nom de l’établissement<input type="text" required /></label><label>Nom / prénom<input type="text" required /></label></div><div className="form-row"><label>Ville<input type="text" required /></label><label>Type d’établissement<input type="text" /></label></div><div className="form-row"><label>Téléphone professionnel<input type="tel" required /></label><label>E-mail<input type="email" required /></label></div><label>Message<textarea rows="4" /></label><button className="button button-primary" type="submit">Demander une borne gratuitement <Arrow /></button></form></section>
       </main>
 
-      <footer className="footer"><div><Logo light /><p>Votre batterie. Partout.</p></div><div className="footer-links"><a href="#fonctionnement">Comment ça marche</a><a href="#tarifs">Tarifs</a><a href="#borne">Trouver une borne</a><a href="#contact">Contact</a></div><div className="footer-contact"><a href="mailto:contact.gobat21@gmail.com">contact.gobat21@gmail.com</a><a href="#mentions">Mentions légales</a></div><div className="legal" id="mentions"><p>Mentions légales</p><p>Les informations légales de GoBat seront complétées prochainement.</p></div></footer>
+      <footer className="footer"><div><Logo light /><p>Votre batterie. Partout.</p></div><div className="footer-links"><a href="#fonctionnement">Comment ça marche</a><a href="#tarifs">Tarifs</a><a href="#borne">Trouver une borne</a><a href="#contact">Contact</a></div><div className="footer-contact"><a href="mailto:contact.gobat21@gmail.com">contact.gobat21@gmail.com</a><a href="#mentions">Mentions légales</a></div><div className="legal" id="mentions">
+  <p>Mentions légales</p>
+
+  <p>
+    Éditeur du site : GoBat – Théo Bellamy, Entrepreneur individuel<br />
+    SIREN : 979 969 359<br />
+    SIRET : 979 969 359 00012<br />
+    TVA intracommunautaire : FR79 979969359<br />
+    Adresse : Rue des Normaliens Fusillés et de leur Camarade, 21000 Dijon – France<br />
+    E-mail : contact.gobat21@gmail.com
+  </p>
+
+  <p>Directeur de la publication : Théo Bellamy</p>
+
+  <p>Hébergement : GitHub Pages – GitHub, Inc.</p>
+
+  <p>
+    L’ensemble des contenus présents sur ce site (textes, éléments graphiques, logo et identité visuelle GoBat) est protégé par les dispositions applicables en matière de propriété intellectuelle. Toute reproduction ou utilisation sans autorisation préalable est interdite.
+  </p>
+</div></footer>
     </div>
   );
 }
