@@ -56,7 +56,7 @@ function App() {
           </div>
           <div className="hero-visual" aria-label="Borne GoBat installée dans un établissement">
             <div className="visual-orbit" /><div className="visual-line" />
-            <img className="station-photo" src="/gobat-borne-originale.png" alt="Borne GoBat avec terminal de paiement et batteries externes" />
+            <img className="station-photo" src="/65E6B0D7-640E-45F8-8ECD-B7D95B8935A7 (1).PNG" alt="Borne GoBat avec terminal de paiement et batteries externes" />
             
           </div>
         </section>
