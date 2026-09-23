@@ -9,7 +9,7 @@ export const establishments = [
       'Sam : 7h30–14h00',
       'Dim : 7h30–19h00'
     ],
-    logo: '',
+    logo: './image00002.jpeg',
   },
   {
     name: 'SIMONE',
@@ -20,7 +20,7 @@ export const establishments = [
       'Lun–Sam : 10h00–00h00',
       'Dim : à confirmer'
     ],
-    logo: '',
+    logo: './image00005.jpeg',
   },
   {
     name: "DIJ'EAT",
@@ -32,7 +32,7 @@ export const establishments = [
       'Ven–Sam : 10h00–00h00',
       'Dim : fermé sauf événement'
     ],
-    logo: '',
+    logo: './image00006.jpeg',
   },
   {
     name: "M'Beer",
@@ -45,7 +45,7 @@ export const establishments = [
       'Ven–Sam : 11h00–02h00',
       'Dim : fermé'
     ],
-    logo: '',
+    logo: './image00003.jpeg',
   },
   {
     name: 'Beer Country',
@@ -56,7 +56,7 @@ export const establishments = [
       'Lun–Ven : 10h00–02h00',
       'Sam–Dim : 15h00–02h00'
     ],
-    logo: '',
+    logo: './image00004.jpeg',
   },
   {
     name: 'Byron Bay',
@@ -68,7 +68,7 @@ export const establishments = [
       'Jeu–Sam : 18h00–02h00',
       'Lun/Dim : fermé'
     ],
-    logo: '',
+    logo: './image00001.jpeg',
   },
 ];
 
