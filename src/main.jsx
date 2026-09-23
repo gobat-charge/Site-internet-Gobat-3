@@ -1,6 +1,6 @@
-import { StrictMode, useState } from 'react';
+import { StrictMode, useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { visiblePartners } from './data/establishments';
+import { visiblePartners, visibleMapLocations } from './data/establishments';
 import './styles.css';
 
 const steps = [
@@ -55,6 +55,63 @@ function StepIcon({ type }) {
     </svg>
   );
 }
+function StationMap() {
+  const mapRef = useRef(null);
+
+  useEffect(() => {
+    if (!mapRef.current || !window.L) return;
+
+    const map = window.L.map(mapRef.current, {
+      scrollWheelZoom: false,
+    }).setView([47.3215, 5.0415], 13);
+
+    window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+    }).addTo(map);
+
+    const bounds = [];
+
+    visibleMapLocations.forEach((establishment) => {
+      const { latitude, longitude, name, address, openingHours } = establishment;
+
+      const marker = window.L.circleMarker([latitude, longitude], {
+        radius: 10,
+        color: '#ffffff',
+        weight: 3,
+        fillColor: '#83bd21',
+        fillOpacity: 1,
+      }).addTo(map);
+
+      const hours = openingHours
+        .map((line) => `<div>${line}</div>`)
+        .join('');
+
+      marker.bindPopup(`
+        <div class="gobat-popup">
+          <strong>${name}</strong>
+          <p>${address}</p>
+          <div class="gobat-popup-hours">${hours}</div>
+        </div>
+      `);
+
+      bounds.push([latitude, longitude]);
+    });
+
+    if (bounds.length > 0) {
+      map.fitBounds(bounds, {
+        padding: [35, 35],
+        maxZoom: 14,
+      });
+    }
+
+    return () => {
+      map.remove();
+    };
+  }, []);
+
+  return <div ref={mapRef} className="station-map" />;
+}
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
@@ -102,7 +159,7 @@ function App() {
 
         <section className="pricing" id="tarifs"><div className="pricing-main"><p className="eyebrow">Tarifs simples et transparents</p><div className="price">1,90 €</div><h2>pour 1 heure.</h2><p>Vous payez selon la durée,<br />sans abonnement ni frais cachés.</p></div><div className="price-list"><div><span>2 heures</span><strong>2,90 €</strong></div><div><span>Puis</span><strong>+0,70 € <small>/ heure</small></strong></div><div><span>Maximum 24 heures</span><strong>5 €</strong></div><div className="price-warning"><span>Non-restitution après 24 h</span><strong>40 €</strong></div></div></section>
 
-        <section className="find section-light" id="borne"><div className="find-copy"><p className="eyebrow">Trouver une borne</p><h2>Trouvez une borne<br />GoBat <span>près de chez vous.</span></h2></div><div className="map-placeholder"><div className="map-grid" /><div className="map-pin">+</div><p>La carte arrive bientôt.</p></div></section>
+        <section className="find section-light" id="borne"><div className="find-copy"><p className="eyebrow">Trouver une borne</p><h2>Trouvez une borne<br />GoBat <span>près de chez vous.</span></h2></div><StationMap /></section>
 
         <section className="partners section-light"><p className="eyebrow eyebrow-centered">Ils nous ont fait confiance</p><h2>GoBat est en cours de déploiement.</h2>{visiblePartners.length > 0 && <div className="partner-logos">{visiblePartners.map((partner) => <img key={partner.name} src={partner.logo} alt={partner.name} />)}</div>}</section>
 
