@@ -1,23 +1,76 @@
-// Ajoutez ici un établissement : un seul endroit suffit pour alimenter la future carte et les partenaires.
 export const establishments = [
-  // Exemple à compléter quand les premières adresses seront disponibles :
-  // {
-  //   name: 'Nom de l’établissement', // Nom affiché
-  //   address: 'Adresse complète', // Adresse utilisée pour l’itinéraire
-  //   openingHours: { // Laisser une journée vide si l’horaire est inconnu
-  //     lundi: '', mardi: '', mercredi: '', jeudi: '', vendredi: '', samedi: '', dimanche: ''
-  //   },
-  //   logo: '', // Chemin du logo dans /partners/
-  //   active: true, // false pour masquer temporairement l’établissement
-  //   showOnMap: true, // true pour l’afficher sur la future carte
-  //   showAsPartner: true // true pour l’afficher parmi les partenaires
-  // }
+  {
+    name: 'Café Hugo',
+    address: '2 place de la Libération, 21000 Dijon',
+    latitude: 47.32107,
+    longitude: 5.04145,
+    openingHours: [
+      'Lun–Ven : 7h30–00h00',
+      'Sam : 7h30–14h00',
+      'Dim : 7h30–19h00'
+    ],
+    logo: '',
+  },
+  {
+    name: 'SIMONE',
+    address: '38 rue des Godrans, 21000 Dijon',
+    latitude: 47.32374,
+    longitude: 5.03862,
+    openingHours: [
+      'Lun–Sam : 10h00–00h00',
+      'Dim : à confirmer'
+    ],
+    logo: '',
+  },
+  {
+    name: "DIJ'EAT",
+    address: '6 impasse de Reggio, 21000 Dijon',
+    latitude: 47.34018,
+    longitude: 5.01984,
+    openingHours: [
+      'Lun–Jeu : 10h00–22h00',
+      'Ven–Sam : 10h00–00h00',
+      'Dim : fermé sauf événement'
+    ],
+    logo: '',
+  },
+  {
+    name: "M'Beer",
+    address: '2A rue Jean-Baptiste Say, 21800 Chevigny-Saint-Sauveur',
+    latitude: 47.29920,
+    longitude: 5.11270,
+    openingHours: [
+      'Lun : fermé',
+      'Mar–Jeu : 11h00–23h00',
+      'Ven–Sam : 11h00–02h00',
+      'Dim : fermé'
+    ],
+    logo: '',
+  },
+  {
+    name: 'Beer Country',
+    address: "2 place du 30 Octobre et de la Légion d'Honneur, 21000 Dijon",
+    latitude: 47.32183,
+    longitude: 5.05292,
+    openingHours: [
+      'Lun–Ven : 10h00–02h00',
+      'Sam–Dim : 15h00–02h00'
+    ],
+    logo: '',
+  },
+  {
+    name: 'Byron Bay',
+    address: '8 Petite rue de Pouilly, 21000 Dijon',
+    latitude: 47.32647,
+    longitude: 5.04794,
+    openingHours: [
+      'Mar–Mer : 18h00–01h30',
+      'Jeu–Sam : 18h00–02h00',
+      'Lun/Dim : fermé'
+    ],
+    logo: '',
+  },
 ];
 
-export const visiblePartners = establishments.filter(
-  (establishment) => establishment.active && establishment.showAsPartner
-);
-
-export const visibleMapLocations = establishments.filter(
-  (establishment) => establishment.active && establishment.showOnMap
-);
+export const visiblePartners = establishments;
+export const visibleMapLocations = establishments;
