@@ -60,3 +60,34 @@
     height:330px;
   }
 }
+/* Partenaires GoBat */
+.partners h2{
+  font-size:clamp(36px,4.5vw,62px);
+  margin:0 auto;
+}
+
+.partner-logos{
+  margin-top:55px;
+  gap:50px;
+}
+
+.partner-logos img{
+  max-width:180px;
+  max-height:80px;
+}
+
+@media(max-width:430px){
+  .partners h2{
+    font-size:38px;
+  }
+
+  .partner-logos{
+    gap:28px;
+    margin-top:38px;
+  }
+
+  .partner-logos img{
+    max-width:135px;
+    max-height:65px;
+  }
+}
