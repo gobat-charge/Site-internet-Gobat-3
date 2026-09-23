@@ -164,3 +164,16 @@
     font-size:18px;
   }
 }
+/* Texte établissement légèrement agrandi */
+.business-list h3{
+  font-size:17px;
+}
+
+.business-list li{
+  font-size:14px;
+  line-height:1.55;
+}
+
+.business-list li span{
+  font-size:16px;
+}
