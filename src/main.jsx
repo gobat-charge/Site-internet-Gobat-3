@@ -157,7 +157,38 @@ function App() {
           <div className="benefits-grid">{benefits.map(([title, text], index) => <article className="benefit" key={title}><span className="benefit-index">0{index + 1}</span><div><h3>{title}</h3><p>{text}</p></div></article>)}</div>
         </section>
 
-        <section className="pricing" id="tarifs"><div className="pricing-main"><p className="eyebrow">Tarifs simples et transparents</p><div className="price">1,90 €</div><h2>pour 1 heure.</h2><p>Vous payez selon la durée,<br />sans abonnement ni frais cachés.</p></div><div className="price-list"><div><span>2 heures</span><strong>2,90 €</strong></div><div><span>Puis</span><strong>+0,70 € <small>/ heure</small></strong></div><div><span>Maximum 24 heures</span><strong>5 €</strong></div><div className="price-warning"><span>Non-restitution après 24 h</span><strong>40 €</strong></div></div></section>
+       <section className="pricing" id="tarifs">
+  <div className="pricing-main">
+    <p className="eyebrow">Tarifs simples et transparents</p>
+    <h2>Une tarification adaptée à chaque lieu.</h2>
+    <p>
+      Les tarifs GoBat peuvent varier selon l’établissement et le type de lieu.
+      <br /><br />
+      Chaque borne affiche clairement la tarification applicable avant le paiement.
+    </p>
+    <p><strong>Sans abonnement ni frais cachés.</strong></p>
+  </div>
+
+  <div className="price-list">
+    <div>
+      <span>01</span>
+      <strong>Tarif affiché sur la borne</strong>
+      <small>Consultez le prix directement avant votre location.</small>
+    </div>
+
+    <div>
+      <span>02</span>
+      <strong>Adapté à chaque établissement</strong>
+      <small>La tarification peut varier selon le lieu et son utilisation.</small>
+    </div>
+
+    <div>
+      <span>03</span>
+      <strong>Aucune surprise</strong>
+      <small>Le prix applicable est indiqué avant la validation du paiement.</small>
+    </div>
+  </div>
+</section>
 
         <section className="find section-light" id="borne"><div className="find-copy"><p className="eyebrow">Trouver une borne</p><h2>Trouvez une borne<br />GoBat <span>près de chez vous.</span></h2></div><StationMap /></section>
 
