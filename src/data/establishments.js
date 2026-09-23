@@ -32,7 +32,7 @@ export const establishments = [
       'Ven–Sam : 10h00–00h00',
       'Dim : fermé'
     ],
-    logo: './image00006.jpeg',
+    logo: './image00006.png',
   },
   {
     name: "M'Beer",
@@ -68,7 +68,7 @@ export const establishments = [
       'Jeu–Sam : 18h00–02h00',
       'Lun/Dim : fermé'
     ],
-    logo: './image00001.jpeg',
+    logo: './image00001.png',
   },
 ];
 
