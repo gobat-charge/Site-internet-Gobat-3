@@ -15,3 +15,48 @@
 .find{padding-bottom:70px}
 @media(max-width:900px){.how{padding-top:64px;padding-bottom:66px}.steps{margin-top:42px}.partners{padding-bottom:58px}.find{padding-bottom:54px}.hero-visual{height:390px}.station-photo{object-position:center}}
 @media(max-width:430px){.logo{font-size:28px}.hero{padding-top:42px;padding-bottom:56px;gap:34px}.hero-visual{height:350px}.how{padding-top:54px;padding-bottom:56px}.how h2,.for-business h2,.benefits h2,.find h2,.formats h2,.contact h2{font-size:48px}.section-lead{margin-top:24px}.steps{margin-top:34px}.partners{padding-top:0;padding-bottom:50px}.find{padding-bottom:48px}.pricing{padding-top:62px;padding-bottom:64px}.benefits{padding-top:66px;padding-bottom:70px}.for-business{padding-top:66px;padding-bottom:70px}.formats{padding-top:68px;padding-bottom:72px}.contact{padding-top:68px;padding-bottom:72px}}
+/* Carte interactive GoBat */
+.station-map{
+  width:100%;
+  height:430px;
+  border-radius:32px;
+  overflow:hidden;
+  border:1px solid rgba(16,19,17,.08);
+  z-index:1;
+}
+
+.gobat-popup{
+  font-family:'Manrope',Arial,sans-serif;
+  min-width:190px;
+}
+
+.gobat-popup strong{
+  font-size:16px;
+  font-weight:800;
+}
+
+.gobat-popup p{
+  margin:7px 0 10px;
+  font-size:12px;
+  line-height:1.4;
+}
+
+.gobat-popup-hours{
+  padding-top:8px;
+  border-top:1px solid rgba(16,19,17,.12);
+  font-size:11px;
+  line-height:1.6;
+}
+
+@media(max-width:900px){
+  .station-map{
+    height:360px;
+    border-radius:24px;
+  }
+}
+
+@media(max-width:430px){
+  .station-map{
+    height:330px;
+  }
+}
