@@ -161,7 +161,7 @@ function App() {
 
         <section className="find section-light" id="borne"><div className="find-copy"><p className="eyebrow">Trouver une borne</p><h2>Trouvez une borne<br />GoBat <span>près de chez vous.</span></h2></div><StationMap /></section>
 
-        <section className="partners section-light"><p className="eyebrow eyebrow-centered">Ils nous ont fait confiance</p><h2>GoBat est en cours de déploiement.</h2>{visiblePartners.length > 0 && <div className="partner-logos">{visiblePartners.map((partner) => <img key={partner.name} src={partner.logo} alt={partner.name} />)}</div>}</section>
+        <section className="partners section-light"><h2>Ils nous ont fait confiance</h2>{visiblePartners.length > 0 && <div className="partner-logos">{visiblePartners.map((partner) => <img key={partner.name} src={partner.logo} alt={partner.name} />)}</div>}</section>
 
         <section className="for-business section-dark" id="etablissements"><div className="business-main"><p className="eyebrow eyebrow-green">Pour les établissements</p><h2>Vous proposez<br />le service.<br /><span>GoBat s’occupe<br />du reste.</span></h2><p>Offrez à vos clients une solution simple pour rester connectés, sans coût et sans gestion pour votre établissement.</p><div className="free-badge"><strong>0 €</strong><span>Aucun coût pour<br />l’établissement</span></div><a className="button button-primary" href="#contact">Demander une borne gratuitement <Arrow /></a></div><div className="business-list"><div><h3>Pour votre établissement</h3><ul>{customerBenefits.map((item) => <li key={item}><span>✓</span>{item}</li>)}</ul></div><div><h3>Pris en charge par GoBat</h3><ul>{gobatBenefits.map((item) => <li key={item}><span>✓</span>{item}</li>)}</ul></div></div></section>
 
