@@ -137,7 +137,14 @@ function App() {
             <p className="eyebrow">Rechargez. Continuez.</p>
             <h1>Plus de<br />batterie ?<br /><span>GoBat</span> prend<br />le relais.</h1>
             <p className="hero-lead">Louez une batterie externe en quelques secondes et restez connecté, où que vous soyez.</p>
-            <div className="hero-actions"><a <a className="button button-primary" href="#borne">Trouver une borne <span aria-hidden="true">📍</span></a><a className="button button-secondary" href="#contact">Je suis un établissement</a></div>
+            <div className="hero-actions">
+  <a className="button button-primary" href="#borne">
+    Trouver une borne <span aria-hidden="true">📍</span>
+  </a>
+  <a className="button button-secondary" href="#contact">
+    Je suis un établissement
+  </a>
+</div>
             <div className="hero-notes"><span><i>✓</i> Paiement sans contact</span><span><i>✓</i> Charge rapide</span></div>
           </div>
           <div className="hero-visual" aria-label="Borne GoBat installée dans un établissement">
