@@ -201,3 +201,34 @@
     padding-bottom:55px;
   }
 }
+
+/* Partenaires : carrousel horizontal sur smartphone */
+@media(max-width:600px){
+  .partner-logos{
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+    overflow-x:auto;
+    gap:32px;
+    padding:5px 22px 18px;
+    margin-left:-22px;
+    margin-right:-22px;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+
+  .partner-logos::-webkit-scrollbar{
+    display:none;
+  }
+
+  .partner-logos img{
+    flex:0 0 auto;
+    width:auto;
+    max-width:145px;
+    height:70px;
+    max-height:70px;
+    object-fit:contain;
+    scroll-snap-align:center;
+  }
+}
