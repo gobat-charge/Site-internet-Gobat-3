@@ -114,7 +114,26 @@ function StationMap() {
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const partnersRef = useRef(null);
   const closeMenu = () => setMenuOpen(false);
+  useEffect(() => {
+  const carousel = partnersRef.current;
+  if (!carousel) return;
+
+  const interval = setInterval(() => {
+    if (window.innerWidth > 600) return;
+
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+    if (carousel.scrollLeft >= maxScroll - 5) {
+      carousel.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      carousel.scrollBy({ left: 175, behavior: 'smooth' });
+    }
+  }, 3000);
+
+  return () => clearInterval(interval);
+}, []);
 
   return (
     <div className="site-shell">
@@ -180,7 +199,7 @@ function App() {
 
         <section className="find section-light" id="borne"><div className="find-copy"><p className="eyebrow">Trouver une borne</p><h2>Trouvez une borne<br />GoBat <span>près de chez vous.</span></h2></div><StationMap /></section>
 
-        <section className="partners section-light"><h2>Ils nous ont fait confiance</h2>{visiblePartners.length > 0 && <div className="partner-logos">{visiblePartners.map((partner) => <img key={partner.name} src={partner.logo} alt={partner.name} />)}</div>}</section>
+        <section className="partners section-light"><h2>Ils nous ont fait confiance</h2>{visiblePartners.length > 0 && <div className="partner-logos" ref={partnersRef}>{visiblePartners.map((partner) => <img key={partner.name} src={partner.logo} alt={partner.name} />)}</div>}</section>
 
         <section className="for-business section-dark" id="etablissements"><div className="business-main"><p className="eyebrow eyebrow-green">Pour les établissements</p><h2>Vous proposez<br />le service.<br /><span>GoBat s’occupe<br />du reste.</span></h2><p>Offrez à vos clients une solution simple pour rester connectés, sans coût et sans gestion pour votre établissement.</p><div className="free-badge"><strong>0 €</strong><span>Aucun coût pour<br />l’établissement</span></div><a className="button button-primary" href="#contact">Demander une borne gratuitement <span aria-hidden="true">🔋</span></a></div><div className="business-list"><div><h3>Pour votre établissement</h3><ul>{customerBenefits.map((item) => <li key={item}><span>✓</span>{item}</li>)}</ul></div><div><h3>Pris en charge par GoBat</h3><ul>{gobatBenefits.map((item) => <li key={item}><span>✓</span>{item}</li>)}</ul></div></div></section>
 
