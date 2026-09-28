@@ -70,6 +70,42 @@ export const establishments = [
     ],
     logo: './image00001.png',
   },
+    {
+    name: 'Mac Callaghan',
+    address: '8 rue Bannelier, 21000 Dijon',
+    latitude: 47.324279,
+    longitude: 5.039912,
+    openingHours: [
+      'Lun : 14h00–02h00',
+      'Mar : 8h00–02h00',
+      'Mer–Jeu : 14h00–02h00',
+      'Ven–Sam : 8h00–02h00',
+      'Dim : 10h00–02h00'
+    ],
+    logo: './image00009.png',
+  },
+  {
+    name: 'Le Beverly',
+    address: '11 avenue du Drapeau, 21000 Dijon',
+    latitude: 47.330829,
+    longitude: 5.043370,
+    openingHours: [
+      'Mer : 18h00–02h00',
+      'Jeu : 18h00–04h00',
+      'Ven–Sam : 18h00–06h00'
+    ],
+    logo: './image00007.jpg',
+  },
+  {
+    name: 'Barrio',
+    address: '18 place de la République, 21000 Dijon',
+    latitude: 47.325939,
+    longitude: 5.045241,
+    openingHours: [
+      'Tous les jours : 16h00–02h00'
+    ],
+    logo: './image00008.jpg',
+  },
 ];
 
 export const visiblePartners = establishments;
