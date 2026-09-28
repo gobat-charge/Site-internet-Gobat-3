@@ -212,15 +212,15 @@ function App() {
   <p>Mentions légales</p>
 
   <p>
-    Éditeur du site : GoBat – Théo Bellamy, Entrepreneur individuel<br />
+    Éditeur du site : GoBat<br />
     SIREN : 979 969 359<br />
     SIRET : 979 969 359 00012<br />
     TVA intracommunautaire : FR79 979969359<br />
-    Adresse : Rue des Normaliens Fusillés et de leur Camarade, 21000 Dijon – France<br />
+    Adresse : 21000 Dijon – France<br />
     E-mail : contact.gobat21@gmail.com
   </p>
 
-  <p>Directeur de la publication : Théo Bellamy</p>
+  <p>Directeur de la publication : GoBat</p>
 
   <p>Hébergement : GitHub Pages – GitHub, Inc.</p>
 
