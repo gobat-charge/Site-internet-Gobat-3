@@ -169,25 +169,6 @@ function App() {
     <p><strong>Sans abonnement ni frais cachés.</strong></p>
   </div>
 
-  <div className="price-list">
-    <div>
-      <span>01</span>
-      <strong>Tarif affiché sur la borne</strong>
-      <small>Consultez le prix directement avant votre location.</small>
-    </div>
-
-    <div>
-      <span>02</span>
-      <strong>Adapté à chaque établissement</strong>
-      <small>La tarification peut varier selon le lieu et son utilisation.</small>
-    </div>
-
-    <div>
-      <span>03</span>
-      <strong>Aucune surprise</strong>
-      <small>Le prix applicable est indiqué avant la validation du paiement.</small>
-    </div>
-  </div>
 </section>
 
         <section className="find section-light" id="borne"><div className="find-copy"><p className="eyebrow">Trouver une borne</p><h2>Trouvez une borne<br />GoBat <span>près de chez vous.</span></h2></div><StationMap /></section>
