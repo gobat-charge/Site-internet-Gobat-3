@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gobat-charge.fr/sitemap.xml
