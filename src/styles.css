@@ -232,3 +232,59 @@
     scroll-snap-align:center;
   }
 }
+
+/* GoBat - Présentation des vraies bornes */
+
+.format-card {
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+.format-card h3 {
+  margin-bottom: 22px;
+}
+
+.station-graphic {
+  width: 100%;
+  height: 290px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.station-graphic img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.format-card .dimensions {
+  position: static;
+  margin-top: auto;
+  padding-top: 15px;
+}
+
+@media (max-width: 900px) {
+  .format-card {
+    min-height: 0;
+  }
+
+  .station-graphic {
+    height: 340px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 430px) {
+  .station-graphic {
+    height: 300px;
+  }
+
+  .format-card h3 {
+    margin-bottom: 16px;
+  }
+}
