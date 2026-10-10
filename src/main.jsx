@@ -146,7 +146,7 @@ function App() {
           <a href="#borne" onClick={closeMenu}>Trouver une borne</a>
           <a href="#etablissements" onClick={closeMenu}>Établissements</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
-          <a className="nav-cta" href="#borne" onClick={closeMenu}>Trouver une borne <span aria-hidden="true">📍</span></a>
+          <a className="nav-cta" href="#borne" onClick={closeMenu}>Trouver une borne </a>
         </nav>
       </header>
 
@@ -158,7 +158,7 @@ function App() {
             <p className="hero-lead">Louez une batterie externe en quelques secondes et restez connecté, où que vous soyez.</p>
             <div className="hero-actions">
   <a className="button button-primary" href="#borne">
-    Trouver une borne <span aria-hidden="true">📍</span>
+    Trouver une borne 
   </a>
   <a className="button button-secondary" href="#contact">
     Je suis un établissement
