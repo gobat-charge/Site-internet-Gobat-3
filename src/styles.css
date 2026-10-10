@@ -291,13 +291,13 @@
 
 /* Boutons principaux de l'accueil */
 .hero .button {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
 }
 
 @media (max-width: 600px) {
   .hero .button {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
   }
 }
