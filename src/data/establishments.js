@@ -68,7 +68,7 @@ export const establishments = [
       'Jeu–Sam : 23h00–06h00',
       'Lun/Mar/Dim : fermé'
     ],
-    logo: './image00001.png',
+    logo: './image000010.png',
   },
     {
     name: 'Mac Callaghan',
