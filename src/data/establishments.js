@@ -59,14 +59,14 @@ export const establishments = [
     logo: './image00004.jpeg',
   },
   {
-    name: 'Byron Bay',
-    address: '8 Petite rue de Pouilly, 21000 Dijon',
-    latitude: 47.327967,
-    longitude: 5.044617,
+    name: 'Salsa Pelpa',
+    address: '1 rue Marceau, 21000 Dijon',
+    latitude: 42.327564,
+    longitude: 5.044716,
     openingHours: [
-      'Mar–Mer : 18h00–01h30',
-      'Jeu–Sam : 18h00–02h00',
-      'Lun/Dim : fermé'
+      'Mer : 00h00–05h00',
+      'Jeu–Sam : 23h00–06h00',
+      'Lun/Mar/Dim : fermé'
     ],
     logo: './image00001.png',
   },
