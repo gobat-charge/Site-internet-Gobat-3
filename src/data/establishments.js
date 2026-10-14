@@ -61,7 +61,7 @@ export const establishments = [
   {
     name: 'Salsa Pelpa',
     address: '1 rue Marceau, 21000 Dijon',
-    latitude: 42.327564,
+    latitude: 47.327564,
     longitude: 5.044716,
     openingHours: [
       'Mer : 00h00–05h00',
