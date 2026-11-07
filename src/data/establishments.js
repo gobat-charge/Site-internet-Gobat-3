@@ -106,7 +106,19 @@ export const establishments = [
     ],
     logo: './image00008.jpg',
   },
-];
+ {
+    name: 'Le Smart',
+    address: '8 rue Claus Sluter, 21000 Dijon',
+    latitude: 47.327862,
+    longitude: 5.045519,
+    openingHours: [
+      'Mer : 20h00–03h00',
+      'Jeu : 20h00–05h30',
+      'Ven–Sam : 20h00–06h00',
+      'Lun/Mar/Dim : fermé'
+    ],
+    logo: './image000011.png',
+  }
 
 export const visiblePartners = establishments;
 export const visibleMapLocations = establishments;
