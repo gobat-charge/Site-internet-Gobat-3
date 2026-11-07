@@ -119,6 +119,6 @@ export const establishments = [
     ],
     logo: './image000011.png',
   }
-
+];
 export const visiblePartners = establishments;
 export const visibleMapLocations = establishments;
