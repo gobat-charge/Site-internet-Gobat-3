@@ -71,15 +71,15 @@ export const establishments = [
     logo: './image000010.png',
   },
    {
-    name: 'Salsa Pelpa',
-    address: '1 rue Marceau, 21000 Dijon',
+    name: 'La Belle Epoque',
+    address: '3 rue Claus Sluter, 21000 Dijon',
     latitude: 47.327322,
     longitude: 5.045365,
     openingHours: [
       'Jeu–Sam : 00h00–04h00',
       'Lun/Mar/Mer/Dim : fermé'
     ],
-    logo: './image000012.png',
+    logo: './image000012.jpg',
   },
     {
     name: 'Mac Callaghan',
