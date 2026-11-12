@@ -70,6 +70,17 @@ export const establishments = [
     ],
     logo: './image000010.png',
   },
+   {
+    name: 'Salsa Pelpa',
+    address: '1 rue Marceau, 21000 Dijon',
+    latitude: 47.327322,
+    longitude: 5.045365,
+    openingHours: [
+      'Jeu–Sam : 00h00–04h00',
+      'Lun/Mar/Mer/Dim : fermé'
+    ],
+    logo: './image000012.png',
+  },
     {
     name: 'Mac Callaghan',
     address: '8 rue Bannelier, 21000 Dijon',
